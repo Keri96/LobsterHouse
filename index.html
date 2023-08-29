@@ -52,11 +52,11 @@
     </nav>
     <!-- ///////////////////////////////////////////NAVBAR///////////////////////////////////////////////////
     ///////////////////////////////////////////MAIN/////////////////////////////////////////////////// -->
-    <section>
+    <section id="main">
       <div>
         <div class="container-lg my-5 bg-primary">
           <div class="justify-content-center">
-            <h1 class="text-light text-center">LOBSTER HARBOR</h1>
+            <h1 class="text-light text-center">LOBSTER HARBOR EATS</h1>
           </div>
         </div>
       </div>
@@ -64,38 +64,40 @@
     <!-- ///////////////////////////////////////////MAIN///////////////////////////////////////////////////
     ///////// -->
     <section id="contact">
-      <div class="container-sm rounded mt-5 border-5 shadow-lg">
-        <div class="text-center text-light">
-          <h2>Get in Touch</h2>
-          <p class="lead">Questions to ask?</p>
-        </div>
-        <div class="row justify-content-center my-5">
-          <div class="col-lg-4 text-light">
-            <div>
-              <label for="name" class="form-label">Name:</label>
-              <input
-                type="text"
-                class="form-control"
-                id="name"
-                placeholder="Adam South"
-              />
-
-              <div class="form-floating mb-4 mt-5">
-                <textarea
-                  id="message"
+      <div class="container-md rounded mt-5 border-5 shadow-lg">
+        <div class="row justify-content-center col-8">
+          <div class="text-center text-light">
+            <h2>Get in Touch</h2>
+            <p class="lead">Or just leave a message to our chef</p>
+          </div>
+          <div class="row justify-content-center my-5">
+            <div class="col-lg-4 text-light">
+              <div>
+                <label for="name" class="form-label">Name:</label>
+                <input
+                  type="text"
                   class="form-control"
-                  style="height: 140px"
-                ></textarea>
-                <label for="query" class="text-dark">Your query...</label>
-              </div>
-              <div class="mb-4 text-center">
-                <button
-                  onclick="sendMail(); clearInputFields()"
-                  type="submit"
-                  class="btn btn-outline-primary"
-                >
-                  Submit
-                </button>
+                  id="name"
+                  placeholder="Adam South"
+                />
+
+                <div class="form-floating mb-4 mt-5">
+                  <textarea
+                    id="message"
+                    class="form-control"
+                    style="height: 140px"
+                  ></textarea>
+                  <label for="query" class="text-dark">Your query...</label>
+                </div>
+                <div class="mb-4 text-center">
+                  <button
+                    onclick="sendMail(); clearInputFields()"
+                    type="submit"
+                    class="btn btn-outline-primary"
+                  >
+                    Submit
+                  </button>
+                </div>
               </div>
             </div>
           </div>
