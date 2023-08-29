@@ -13,7 +13,7 @@
     <title>Lobster Harbor Eats</title>
   </head>
   <body class="bg-dark">
-    ///////////////////////////////////////////NAVBAR///////////////////////////////////////////////////
+    <!-- ///////////////////////////////////////////NAVBAR/////////////////////////////////////////////////// -->
     <nav class="navbar sticky-top navbar-expand-md bg-primary">
       <div class="container-xxl">
         <!-- togfgle buton for mobile nav -->
@@ -41,7 +41,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link text-light" href="#tos">Take out shop</a>
+              <a class="nav-link text-light" href="#menu">Menu</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="#contact">Contact</a>
@@ -50,17 +50,58 @@
         </div>
       </div>
     </nav>
-    ///////////////////////////////////////////NAVBAR///////////////////////////////////////////////////
-    ///////////////////////////////////////////MAIN///////////////////////////////////////////////////
+    <!-- ///////////////////////////////////////////NAVBAR///////////////////////////////////////////////////
+    ///////////////////////////////////////////MAIN/////////////////////////////////////////////////// -->
     <section>
       <div>
         <div class="container-lg my-5 bg-primary">
           <div class="justify-content-center">
-            <h1 class="text-light">LOBSTER HARBOR</h1>
+            <h1 class="text-light text-center">LOBSTER HARBOR</h1>
           </div>
         </div>
       </div>
     </section>
-    ///////////////////////////////////////////MAIN///////////////////////////////////////////////////
+    <!-- ///////////////////////////////////////////MAIN///////////////////////////////////////////////////
+    ///////// -->
+    <section id="contact">
+      <div class="container-sm rounded mt-5 border-5 shadow-lg">
+        <div class="text-center text-light">
+          <h2>Get in Touch</h2>
+          <p class="lead">Questions to ask?</p>
+        </div>
+        <div class="row justify-content-center my-5">
+          <div class="col-lg-4 text-light">
+            <div>
+              <label for="name" class="form-label">Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Adam South"
+              />
+
+              <div class="form-floating mb-4 mt-5">
+                <textarea
+                  id="message"
+                  class="form-control"
+                  style="height: 140px"
+                ></textarea>
+                <label for="query" class="text-dark">Your query...</label>
+              </div>
+              <div class="mb-4 text-center">
+                <button
+                  onclick="sendMail(); clearInputFields()"
+                  type="submit"
+                  class="btn btn-outline-primary"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ///////////// -->
   </body>
 </html>
