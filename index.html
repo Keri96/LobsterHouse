@@ -3,8 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/sass/main.min.css" />
+
     <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/sass/main.min.css" />
+    <style>
+      .mask-custom {
+        backdrop-filter: blur(3px);
+        background-color: rgba(187, 36, 12, 0.3);
+      }
+    </style>
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"
+    ></script>
     <script src="script.js" type="text/javascript"></script>
     <!-- <link
       rel="stylesheet"
@@ -15,6 +31,9 @@
   <body class="bg-dark">
     <!-- ///////////////////////////////////////////NAVBAR/////////////////////////////////////////////////// -->
     <nav class="navbar sticky-top navbar-expand-md bg-primary">
+      <a href="main" class="navbar-logo ms-5">
+        <img src="/src/lobster_logo.png" width="48" height="48" alt="" />
+      </a>
       <div class="container-xxl">
         <!-- togfgle buton for mobile nav -->
         <button
@@ -54,36 +73,48 @@
     ///////////////////////////////////////////MAIN/////////////////////////////////////////////////// -->
     <section id="main">
       <div
-        class="bg-image d-flex"
+        class="bg-image"
         style="
           background-image: url(https://www.tastingtable.com/img/gallery/16-types-of-lobster-explained/intro-1656418659.webp);
           height: 100vh;
         "
       >
-        <div class="container-lg my-5">
-          <div class="justify-content-center">
-            <h1 class="text-light text-center">LOBSTER HARBOR EATS</h1>
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.69)">
+          <div class="container-lg alignt-items-center justify-content-center">
+            <div class="d-flex align-items-center h-100 justify-content-center">
+              <h1 class="text-light text-center mb-5 pt-5">
+                LOBSTER HARBOR EATS
+              </h1>
+            </div>
+            <div class="container-lg">
+              <div class="row mask-custom">
+                <p class="text-light">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+                  beatae doloremque fugit! Accusamus reiciendis nihil, sequi
+                  alias soluta ut itaque enim provident officiis quam. Dolorem?
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)"></div>
     </section>
     <!-- ///////////////////////////////////////////MAIN///////////////////////////////////////////////////
     ///////// -->
-    <section id="contact">
-      <div class="container-md rounded mt-5 border-5 shadow-lg">
+    <!-- <section id="contact">
+      <div class="container-md bg-primary rounded mt-5 border-5 shadow-lg">
         <div class="row justify-content-center">
-          <div class="text-center text-light">
+          <div class="text-center text-light mt-5">
             <h2>Get in Touch</h2>
             <p class="lead">Or just leave a message to our chef</p>
           </div>
           <div class="row justify-content-center my-5">
-            <div class="col-lg-4 text-light">
+            <div class="col-lg-4 text-white">
               <div>
                 <label for="name" class="form-label">Name:</label>
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control text-white"
                   id="name"
                   placeholder="Adam South"
                 />
@@ -110,7 +141,6 @@
           </div>
         </div>
       </div>
-    </section>
-    <!-- ///////////// -->
+    </section> -->
   </body>
 </html>
