@@ -1,4 +1,10 @@
 $primary: rgb(187, 36, 12);
 $dark: rgb(21, 21, 21);
 
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,800;1,300&display=swap");
+
+:root {
+  --bs-body-font-family: "Noto Serif", serif;
+}
+
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
