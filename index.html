@@ -28,11 +28,11 @@
     /> -->
     <title>Lobster Harbor Eats</title>
   </head>
-  <body class="bg-light">
+  <body class="bg-light ">
     <!-- ///////////////////////////////////////////NAVBAR/////////////////////////////////////////////////// -->
     <nav class="navbar sticky-top navbar-expand-md bg-primary">
       <div class="container-xxl">
-        <a href="main" class="navbar-logo ms-5 me-5">
+        <a href="main" class="navbar-logo ml-5 mr-5">
           <img src="/src/lobster_logo.png" width="48" height="48" alt="" />
         </a>
         <a
@@ -78,9 +78,9 @@
       </div>
     </nav>
     <!-- ///////////////////////////////////////////NAVBAR/////////////////////////////////////////////////// -->
-    <section id="menu">
+    <section class="mb-5" id="menu">
       <div class="bg-light">
-        <div class="container-lg text-dark mb-5">
+        <div class="container-lg text-dark mt-5 mb-5">
           <div class="text-center">
             <h2 class="">Menu</h2>
             <p class="lead">
@@ -234,19 +234,22 @@
         </div>
       </div>
     </section>
-    <section id="hours">
+    <section class="mt-5" id="hours">
       <div
         class="bg-image"
         style="
-          background-image: url(https://www.tastingtable.com/img/gallery/16-types-of-lobster-explained/intro-1656418659.webp);
-          height: 50vh;
+          background-image: url(https://cdn.shopify.com/s/files/1/0770/5745/files/LIMEHOUSE.jpg?v=1659517594);
+          height: 100vh;
         "
       >
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.69)">
+          <div class="row">
+
+          </div>
           <div class="container-sm alignt-items-center justify-content-center">
-            <div class="container-sm mt-5">
-              <div class="row rounded mask-custom">
-                <p class="text-light text-center text-bold">
+            <div class="container-sm col-lg-4 mt-5 ">
+              <div class="p-2 rounded mask-custom">
+                <p class=" text-light text-center text-bold">
                   The Lobster Harbor Eats is an all you can eat restaurant. You
                   can choose when you want to reserve a table with us, and that
                   decides the price
@@ -255,14 +258,80 @@
                   <p class="text-light text-center">1.00 P.M - 3.00 P.M ~ 45$ / person</p>
                   <p class="text-light text-center">3.30 P.M - 5.30 P.M ~ 45$ / person</p>
                   <p class="text-light text-center">5.30 P.M - 7.30 P.M ~ 45$ / person</p>
-                  <p class="text-light text-center">7.30 P.M - 9.30 P.M ~ 45$ / person</p>
-                  <p class="text-light text-center">9.30 P.M - 11.00 P.M ~ 45$ / person</p>
+                  <p class="text-light text-center">7.30 P.M - 9.30 P.M ~ 50$ / person</p>
+                  <p class="text-light text-center">9.30 P.M - 11.00 P.M ~ 50$ / person</p>
+                  <p class="text-light text-center"></p>
+                  <p class="text-light text-center">Phone: 609-884-8296</p>
                 </p>
                 
               </div>
+              <!-- <div class="row rounded mask-custom">
+                <div class="text-light text-center text-bold">Phone: 609-884-8296</div>
+              </div> -->
             </div>
           </div>
+          <div
+          class="container-sm mask-custom col-lg-6 rounded shadow-lg"
+          >
+              
+              <div class="text-center text-dark mt-5 mb-5">
+                <h2>Reservation</h2>
+                <p class="lead">Please fill the fields</p>
+              </div>
+              <div class="row justify-content-center my-5">
+                <div class="col-lg-4 text-dark">
+                  <div>
+                    <label for="name" class="form-label text-dark">Name:</label>
+                    <input
+                      type="text"
+                      class="form-control mb-2"
+                      id="name"
+                      placeholder="Adam South"
+                    />
+                    <label for="Email" class="form-label text-dark">Email:</label>
+                    <input
+                      type="text"
+                      class="form-control mb-2"
+                      id="name"
+                      placeholder="davidjones@gmail.com"
+                    />
+                    
+                    
+
+                    
+                    <div class="my-3 ">
+                      
+                      
+                      <div>
+                        <div class="dropdown">
+                          <button class="btn btn-primary my-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown button
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          </ul>
+                        </div>
+                        <button
+                        onclick="sendMail(); clearInputFields()"
+                        type="submit"
+                        class="btn btn-primary "
+                        >
+                          Submit
+                        </button>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+
         </div>
+        
+
       </div>
     </section>
     <!-- ///////////////////////////////////////////MAIN/////////////////////////////////////////////////// -->
@@ -319,7 +388,7 @@
         class="bg-image mt-5"
         style="
           background-image: url(https://www.saveur.com/uploads/2022/07/12/00-LEAD-How-To-Cook-Lobster-Saveur-Hero-scaled.jpg?auto=webp&width=2000&height=1334);
-          height: 100vh;
+          
         "
       >
         <div
@@ -370,5 +439,9 @@
       integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
       crossorigin="anonymous"
     ></script>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+  integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+  crossorigin="anonymous"></script>
   </body>
 </html>
