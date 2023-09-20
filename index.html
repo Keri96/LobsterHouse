@@ -32,16 +32,16 @@
     <!-- ///////////////////////////////////////////NAVBAR/////////////////////////////////////////////////// -->
     <nav class="navbar sticky-top navbar-expand-md bg-primary">
       <div class="container-xxl">
-        <a href="main" class="navbar-logo ml-5 mr-5">
+        <!-- <a href="main" class="navbar-logo ml-5 mr-5">
           <img src="/src/lobster_logo.png" width="48" height="48" alt="" />
-        </a>
+        </a> -->
         <a
-          class="navbar-brand ml-5 text-white text-bold"
+          class="navbar-brand  text-white text-bold"
           style="font-family: Noto Serif"
           href="#"
           >LOBSTER HARBOR EATS</a
         >
-        <div class="container-xxl">
+        <div class="container-sm">
           <!-- togfgle buton for mobile nav -->
           <button
             class="navbar-toggler"
@@ -52,7 +52,7 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon p-3"></span>
           </button>
           <div
             class="collapse navbar-collapse justify-content-end align-center"
@@ -73,26 +73,64 @@
                 <a class="nav-link text-light" href="#contact">Contact</a>
               </li>
             </ul>
-            <a href="cart.html" class="navbar-logo ml-5 mr-5">
+            <div href="" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"  class="shopping btn btn-outline-primary navbar-logo ml-5 mr-5">
               <img src="/src/icons8-cart-48.png" width="24" height="24" alt="" />
+              <span class="quantity">0</span>
+            </div>
+            <a href="#login"  role="button" data-bs-toggle="modal" data-bs-target="#loginmodal"  class=" btn btn-outline-primary navbar-logo ml-5 mr-5">
+              <img src="/src/account_white.png" width="24" height="24" alt="" />
             </a>
+            
+            
+
+            
           </div>
         </div>
       </div>
     </nav>
+    
+    
+    
+    
     <!-- ///////////////////////////////////////////NAVBAR/////////////////////////////////////////////////// -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">CART</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close closeShopping"></button>
+      </div>
+      <div class="offcanvas-body ">
+        <div class="card ">
+          
+          <ul class="listCard mb-1 ">
+          </ul>
+          <div class="checkOut">
+            <div class="total">$</div>
+             <!-- <div class="btn-close">Close</div>  --> 
+          </div>
+          <!-- <div>
+            <button href="order.html" type="button"  class="btn btn-primary">Order</button>
+          </div> -->
+        </div> 
+      </div>
+    </div>
+    
+    
     <section class="mb-5" id="menu">
       <div class="bg-light">
         <div class="container-lg text-dark mt-5 mb-5">
           <div class="text-center">
-            <h2 class="">Menu</h2>
-            <p class="lead">
+            <h1 class="">Menu</h1>
+            <p class="lead ">
               "If you want to enjoy our meal from the comfortable of your home ,
               choose from 9 delicious food"
             </p>
           </div>
-          <div class="row justify-content-center">
-            <div class="card m-3 p-2 shadow-lg" style="width: 18rem">
+          <div class="list justify-content-center col-sm-12  ">
+          
+          </div>
+          <!-- //////////////////////////////////////MY MEGOLDÁS///////////////////////// -->
+          <!-- <div class="row justify-content-center ">
+            <div class="item card m-3 p-2 shadow-lg" style="width: 18rem">
               <img src="/src/lobsteeer.jpg" class="card-img-top" alt="..." />
               <div class="card-body text-center">
                 <h5 class="card-title">L&L</h5>
@@ -101,10 +139,10 @@
                   Zesty Lemon."
                 </p>
                 <h3>25$</h3>
-                <a href="#" class="btn btn-primary">Add To Cart</a>
+                <button href="#" onclick="addToCard"  class="btn btn-primary ">Add To Cart</button>
               </div>
             </div>
-            <div class="card m-3 p-2 shadow-lg" style="width: 18rem">
+            <div class="item card m-3 p-2 shadow-lg" style="width: 18rem">
               <img
                 src="/src/lobster_thermidor_nagy.jpg"
                 class="card-img-top"
@@ -117,10 +155,10 @@
                   the bulk of the card's content.
                 </p>
                 <h3>25$</h3>
-                <a href="#" class="btn btn-primary">Add To Cart</a>
+                <a href="#" class="btn btn-primary add-to-btn">Add To Cart</a>
               </div>
             </div>
-            <div class="card m-3 p-2 shadow-lg" style="width: 18rem">
+            <div class="item card m-3 p-2 shadow-lg" style="width: 18rem">
               <img
                 src="/src/lobster_salad.PNG"
                 class="card-img-top"
@@ -133,12 +171,12 @@
                   greens, a seafood sensation.
                 </p>
                 <h3>20$</h3>
-                <a href="#" class="btn btn-primary">Add To Cart</a>
+                <a href="#" class="btn btn-primary add-to-btn">Add To Cart</a>
               </div>
             </div>
           </div>
           <div class="row justify-content-center">
-            <div class="card m-3 p-2 shadow-lg" style="width: 18rem">
+            <div class="item card m-3 p-2 shadow-lg" style="width: 18rem">
               <img
                 src="/src/lobster_newberg.jpg"
                 class="card-img-top"
@@ -151,10 +189,10 @@
                   elegance redefined.
                 </p>
                 <h3>15$</h3>
-                <a href="#" class="btn btn-primary">Add To Cart</a>
+                <a href="#" class="btn btn-primary add-to-btn">Add To Cart</a>
               </div>
             </div>
-            <div class="card m-3 p-2 shadow-lg" style="width: 18rem">
+            <div class="item card m-3 p-2 shadow-lg" style="width: 18rem">
               <img src="/src/lobster_mac.jpg" class="card-img-top" alt="..." />
               <div class="card-body text-center">
                 <h5 class="card-title">Lobster Mac & Cheese</h5>
@@ -163,10 +201,10 @@
                   cheesy goodness with lobster.
                 </p>
                 <h3>15$</h3>
-                <a href="#" class="btn btn-primary">Add To Cart</a>
+                <a href="#" class="btn btn-primary add-to-btn">Add To Cart</a>
               </div>
             </div>
-            <div class="card m-3 p-2 shadow-lg" style="width: 18rem">
+            <div class="item card m-3 p-2 shadow-lg" style="width: 18rem">
               <img
                 src="/src/tail2.jpg"
                 class="card-img-top height: 90vh"
@@ -179,12 +217,12 @@
                   coastal flavor indulgence.
                 </p>
                 <h3>18.50$</h3>
-                <a href="#" class="btn btn-primary">Add To Cart</a>
+                <a href="#" class="btn btn-primary add-to-btn">Add To Cart</a>
               </div>
             </div>
           </div>
           <div class="row justify-content-center">
-            <div class="card m-3 p-2 shadow-lg" style="width: 18rem">
+            <div class="item card m-3 p-2 shadow-lg" style="width: 18rem">
               <img
                 src="/src/lobster_scampi.webp"
                 class="card-img-top"
@@ -197,11 +235,11 @@
                   seafood delight.
                 </p>
                 <h3>18$</h3>
-                <a href="#" class="btn btn-primary">Add To Cart</a>
+                <a href="#" class="btn btn-primary add-to-btn">Add To Cart</a>
               </div>
             </div>
 
-            <div class="card m-3 p-2 shadow-lg" style="width: 18rem">
+            <div class="item card m-3 p-2 shadow-lg" style="width: 18rem">
               <img
                 src="/src/lobster_bique.jpg"
                 class="card-img-top"
@@ -214,10 +252,10 @@
                   soup; a taste of oceanic opulence.
                 </p>
                 <h3>10$</h3>
-                <a href="#" class="btn btn-primary">Add To Cart</a>
+                <a href="#" class="btn btn-primary add-to-btn">Add To Cart</a>
               </div>
             </div>
-            <div class="card m-3 p-2 shadow-lg" style="width: 18rem">
+            <div class="item card m-3 p-2 shadow-lg" style="width: 18rem">
               <img
                 src="/src/lobster_roll.webp"
                 class="card-img-top"
@@ -230,10 +268,10 @@
                   England seafood delight.
                 </p>
                 <h3>6$</h3>
-                <a href="#" class="btn btn-primary">Add To Cart</a>
+                <a href="#" class="btn btn-primary add-to-btn">Add To Cart</a>
               </div>
-            </div>
-          </div>
+            </div> 
+          </div> -->
         </div>
       </div>
     </section>
@@ -242,95 +280,95 @@
         class="bg-image"
         style="
           background-image: url(https://cdn.shopify.com/s/files/1/0770/5745/files/LIMEHOUSE.jpg?v=1659517594);
-          height: 100vh;
+          height: 900px;
         "
       >
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.69)">
           <div class="row">
 
           </div>
-          <div class="container-sm alignt-items-center justify-content-center">
-            <div class="container-sm col-lg-4 mt-5 ">
-              <div class="p-2 rounded mask-custom">
-                <p class=" text-light text-center text-bold">
-                  The Lobster Harbor Eats is an all you can eat restaurant. You
-                  can choose when you want to reserve a table with us, and that
-                  decides the price
-                  <p class="text-light text-center">11.00 A.M - 12.00 A.M ~ 35$ / person</p>
-                  <p class="text-light text-center">12.00 A.M - 1.00 P.M ~ 45$ / person</p>
-                  <p class="text-light text-center">1.00 P.M - 3.00 P.M ~ 45$ / person</p>
-                  <p class="text-light text-center">3.30 P.M - 5.30 P.M ~ 45$ / person</p>
-                  <p class="text-light text-center">5.30 P.M - 7.30 P.M ~ 45$ / person</p>
-                  <p class="text-light text-center">7.30 P.M - 9.30 P.M ~ 50$ / person</p>
-                  <p class="text-light text-center">9.30 P.M - 11.00 P.M ~ 50$ / person</p>
-                  <p class="text-light text-center"></p>
-                  <p class="text-light text-center">Phone: 609-884-8296</p>
-                </p>
+          <div class="container   ">
+            <div class="container-sm row ">
+              <div class="container-sm col-lg-6 mt-5 ">
+                <div class="p-2 rounded mask-custom">
+                  <p class=" text-light text-center text-bold">
+                    The Lobster Harbor Eats is an all you can eat restaurant. You
+                    can choose when you want to reserve a table with us, and that
+                    decides the price
+                    <p class="text-light text-center">11.00 A.M - 12.00 A.M ~ 35$ / person</p>
+                    <p class="text-light text-center">12.00 A.M - 1.00 P.M ~ 45$ / person</p>
+                    <p class="text-light text-center">1.00 P.M - 3.00 P.M ~ 45$ / person</p>
+                    <p class="text-light text-center">3.30 P.M - 5.30 P.M ~ 45$ / person</p>
+                    <p class="text-light text-center">5.30 P.M - 7.30 P.M ~ 45$ / person</p>
+                    <p class="text-light text-center">7.30 P.M - 9.30 P.M ~ 50$ / person</p>
+                    <p class="text-light text-center">9.30 P.M - 11.00 P.M ~ 50$ / person</p>
+                    <p class="text-light text-center"></p>
+                    <p class="text-light text-center">Phone: 609-884-8296</p>
+                  </p>
+                  
+                </div>
+                <!-- <div class="row rounded mask-custom">
+                  <div class="text-light text-center text-bold">Phone: 609-884-8296</div>
+                </div> -->
+              </div>
+              <div class="container-sm mask-custom col-lg-6 rounded mb-5 mt-5 shadow-lg">
                 
-              </div>
-              <!-- <div class="row rounded mask-custom">
-                <div class="text-light text-center text-bold">Phone: 609-884-8296</div>
-              </div> -->
-            </div>
-          </div>
-          <div
-          class="container-sm mask-custom col-lg-6 rounded shadow-lg"
-          >
-              
-              <div class="text-center text-dark mt-5 mb-5">
-                <h2>Reservation</h2>
-                <p class="lead">Please fill the fields</p>
-              </div>
-              <div class="row justify-content-center my-5">
-                <div class="col-lg-4 text-dark">
-                  <div>
-                    <label for="name" class="form-label text-dark">Name:</label>
-                    <input
-                      type="text"
-                      class="form-control mb-2"
-                      id="name"
-                      placeholder="Adam South"
-                    />
-                    <label for="Email" class="form-label text-dark">Email:</label>
-                    <input
-                      type="text"
-                      class="form-control mb-2"
-                      id="name"
-                      placeholder="davidjones@gmail.com"
-                    />
-                    
-                    
-
-                    
-                    <div class="my-3 ">
+                <div class="text-center text-light mt-3 mb-4">
+                  <h2>Reservation</h2>
+                  
+                </div>
+                <div class="row justify-content-center my-5">
+                  <div class="col-lg-10 text-dark">
+                    <div>
+                      
+                      <input
+                        type="text"
+                        class="form-control mb-2"
+                        id="reservation_name"
+                        placeholder="Name"
+                      />
+                      
+                      <input
+                        type="text"
+                        class="form-control mb-2"
+                        id="emailaddress"
+                        placeholder="e-mail"
+                      />
+                      <input
+                        type="text"
+                        class="form-control mb-2"
+                        id="emailaddress"
+                        placeholder="Number of persons"
+                      />
                       
                       
-                      <div>
-                        <div class="dropdown">
-                          <button class="btn btn-primary my-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown button
+  
+                      
+                      <div class="my-3 ">
+                        
+                        
+                        <div>
+                          
+                          <button
+                          onclick="sendMail(); clearInputFields()"
+                          type="submit"
+                          class="btn btn-primary "
+                          >
+                            Submit
                           </button>
-                          <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                          </ul>
                         </div>
-                        <button
-                        onclick="sendMail(); clearInputFields()"
-                        type="submit"
-                        class="btn btn-primary "
-                        >
-                          Submit
-                        </button>
+                        
                       </div>
-                      
                     </div>
                   </div>
                 </div>
+              
               </div>
+
+            </div>
             
           </div>
+          
 
         </div>
         
@@ -343,7 +381,7 @@
         class="bg-image mt-5"
         style="
           background-image: url(https://www.tastingtable.com/img/gallery/16-types-of-lobster-explained/intro-1656418659.webp);
-          height: 100vh;
+          height: 1080px;
         "
       >
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.69)">
@@ -437,6 +475,36 @@
         </div>
       </div>
     </section>
+    <div class="modal fade" id="loginmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h1 class="modal-title text-light  fs-5" id="exampleModalLabel">LOGIN</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input
+            type="text"
+            class="form-control mb-2 login__input login__input--user"
+            id="login_name"
+            placeholder="Username"
+            />
+            <input
+            type="text"
+            class="form-control login__input login__input--pin"
+            id="login_password"
+            placeholder="password"
+            />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary login__btn">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
     <script src="addtocart.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
@@ -448,6 +516,9 @@
       integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
       crossorigin="anonymous"
     ></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" 
+      integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"
+    ></script>
+      
   </body>
 </html>
