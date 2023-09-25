@@ -1,5 +1,5 @@
-const inputLoginUsername = document.forms(".login__input--user");
-const inputLoginPin = document.querySelector(".login__input--pin");
+let inputLoginUsername = document.querySelector(".login__input--user");
+let inputLoginPin = document.querySelector(".login__input--pin");
 
 const btnLogin = document.querySelector(".login__btn");
 
@@ -7,8 +7,24 @@ const btnLogin = document.querySelector(".login__btn");
 
 const account = {
   name: "test",
-  password: "Test1234",
+  password: "password",
 };
 
-const username = "test";
-const password = "password";
+let currentAccount;
+
+inputLoginUsername = "";
+inputLoginPin = "";
+
+btnLogin.addEventListener("click", function (e) {
+  e.preventDefault();
+  console.log("login");
+
+  if (
+    inputLoginUsername.value === account.name &&
+    inputLoginPin.value === account.password
+  ) {
+    console.log("Login succesfull");
+  }
+});
+
+console.log(account.password);

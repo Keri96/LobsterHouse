@@ -79,12 +79,17 @@ let listCards = [];
 function initApp() {
   products.forEach((value, key) => {
     let newDiv = document.createElement("div");
-    newDiv.classList.add("item");
+    newDiv.classList.add("item", "col-sm-12");
+
     newDiv.innerHTML = `
-            <img src="src/${value.image}">
-            <div class="title">${value.name}</div>
-            <div class="price">${value.price.toLocaleString()}$</div>
-            <button onclick="addToCard(${key})">Add To Card</button>`;
+            
+              <img src="src/${value.image}">
+              <div class="title">${value.name}</div>
+              <div class="price">${value.price.toLocaleString()}$</div>
+              <button onclick="addToCard(${key})">Add To Card</button>
+            
+
+            `;
     list.appendChild(newDiv);
   });
 }
@@ -133,4 +138,25 @@ function changeQuantity(key, quantity) {
     listCards[key].price = quantity * products[key].price;
   }
   reloadCard();
+}
+
+//////////////////////////////////////send email
+
+function sendMail() {
+  const params = {
+    from_name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+    persons: document.getElementById("persons").value,
+  };
+  emailjs.send("keri_service", "template_0zirslj", params).then(function (res) {
+    alert("Thank you for message us");
+  });
+}
+
+function clearInputFields() {
+  document.getElementById("name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("message").value = "";
+  document.getElementById("persons").value = "";
 }

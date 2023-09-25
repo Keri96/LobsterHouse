@@ -22,6 +22,15 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"
     ></script>
     <script src="script.js" type="text/javascript"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("FMrV7MVhu1FcOJ1ZQ");
+      })();
+    </script>
     <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
@@ -31,17 +40,18 @@
   <body class="bg-light ">
     <!-- ///////////////////////////////////////////NAVBAR/////////////////////////////////////////////////// -->
     <nav class="navbar sticky-top navbar-expand-md bg-primary">
-      <div class="container-xxl">
-        <!-- <a href="main" class="navbar-logo ml-5 mr-5">
+      <div class="container-md">
+        <!-- <a href="main" class="navbar-logo ml-1 mr-1">
           <img src="/src/lobster_logo.png" width="48" height="48" alt="" />
         </a> -->
         <a
-          class="navbar-brand  text-white text-bold"
+          class="navbar-brand  text-white text-center text-bold"
           style="font-family: Noto Serif"
           href="#"
           >LOBSTER HARBOR EATS</a
         >
-        <div class="container-sm">
+        
+        <div class="container-md row">
           <!-- togfgle buton for mobile nav -->
           <button
             class="navbar-toggler"
@@ -73,11 +83,11 @@
                 <a class="nav-link text-light" href="#contact">Contact</a>
               </li>
             </ul>
-            <div href="" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"  class="shopping btn btn-outline-primary navbar-logo ml-5 mr-5">
+            <div href="" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"  class="shopping btn btn-outline-primary navbar-logo ml-2 mr-2">
               <img src="/src/icons8-cart-48.png" width="24" height="24" alt="" />
               <span class="quantity">0</span>
             </div>
-            <a href="#login"  role="button" data-bs-toggle="modal" data-bs-target="#loginmodal"  class=" btn btn-outline-primary navbar-logo ml-5 mr-5">
+            <a href="#login"  role="button" data-bs-toggle="modal" data-bs-target="#loginmodal"  class=" btn btn-outline-primary navbar-logo ml-2 mr-2">
               <img src="/src/account_white.png" width="24" height="24" alt="" />
             </a>
             
@@ -85,7 +95,12 @@
 
             
           </div>
+          
+            
+          
+          
         </div>
+        
       </div>
     </nav>
     
@@ -122,10 +137,10 @@
             <h1 class="">Menu</h1>
             <p class="lead ">
               "If you want to enjoy our meal from the comfortable of your home ,
-              choose from 9 delicious food"
+              choose from 10 delicious food"
             </p>
           </div>
-          <div class="list justify-content-center col-sm-12  ">
+          <div class="list justify-content-center col-sm-12  custom ">
           
           </div>
           <!-- //////////////////////////////////////MY MEGOLDÁS///////////////////////// -->
@@ -324,20 +339,20 @@
                       <input
                         type="text"
                         class="form-control mb-2"
-                        id="reservation_name"
+                        id="name"
                         placeholder="Name"
                       />
                       
                       <input
                         type="text"
                         class="form-control mb-2"
-                        id="emailaddress"
+                        id="email"
                         placeholder="e-mail"
                       />
                       <input
-                        type="text"
+                        type="number"
                         class="form-control mb-2"
-                        id="emailaddress"
+                        id="persons"
                         placeholder="Number of persons"
                       />
                       
@@ -412,11 +427,32 @@
               <div
                 class="mt-5 justify-content-center align-items-center d-flex"
               >
-                <img
+              <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="/src/lobster_interior.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/src/house.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/src/lobster_water.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+                <!-- <img
                   class="mb-5"
                   src="/src/lobster_interior.webp"
                   alt="house"
-                />
+                /> -->
               </div>
             </div>
           </div>
@@ -440,7 +476,7 @@
               <h2>Get in Touch</h2>
               <p class="lead">Or just leave a message to our chef</p>
             </div>
-            <div class="row justify-content-center my-5">
+            <div class="row justify-content-center my-3">
               <div class="col-lg-4 text-dark">
                 <div>
                   <label for="name" class="form-label text-dark">Name:</label>
@@ -451,7 +487,7 @@
                     placeholder="Adam South"
                   />
 
-                  <div class="form-floating mb-4 mt-5">
+                  <div class="form-floating mb-4 mt-2">
                     <textarea
                       id="message"
                       class="form-control"
