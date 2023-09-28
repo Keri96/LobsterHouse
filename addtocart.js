@@ -86,7 +86,10 @@ function initApp() {
               <img src="src/${value.image}">
               <div class="title">${value.name}</div>
               <div class="price">${value.price.toLocaleString()}$</div>
-              <button onclick="addToCard(${key})">Add To Card</button>
+              <div class="col-sm-6 offset-sm-3 text-center d-flex text-center alignt-items-center" >
+                <button class="btn" onclick="addToCard(${key})">Add To Card</button>
+              </div>
+              
             
 
             `;
@@ -114,7 +117,7 @@ function reloadCard() {
       newDiv.innerHTML = `
                 <div><img src="src/${value.image}"/></div>
                 <div>${value.name}</div>
-                <div>${value.price.toLocaleString()}</div>
+                <div>${value.price.toLocaleString() + "$"}</div>
                 <div>
                     <button onclick="changeQuantity(${key}, ${
         value.quantity - 1
@@ -148,6 +151,7 @@ function sendMail() {
     email: document.getElementById("email").value,
     message: document.getElementById("message").value,
     persons: document.getElementById("persons").value,
+    hour: document.getElementById("hour").value,
   };
   emailjs.send("keri_service", "template_0zirslj", params).then(function (res) {
     alert("Thank you for message us");
@@ -159,4 +163,5 @@ function clearInputFields() {
   document.getElementById("email").value = "";
   document.getElementById("message").value = "";
   document.getElementById("persons").value = "";
+  document.getElementById("hour").value = "";
 }
