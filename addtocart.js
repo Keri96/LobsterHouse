@@ -154,7 +154,7 @@ function sendMail() {
     hour: document.getElementById("hour").value,
   };
   emailjs.send("keri_service", "template_0zirslj", params).then(function (res) {
-    alert("Thank you for message us");
+    alert("You have successfully placed your order");
   });
 }
 
